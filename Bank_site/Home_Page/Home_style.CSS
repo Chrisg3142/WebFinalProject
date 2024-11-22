@@ -1,34 +1,76 @@
+/* Header for all pages */
 .headercontain{
     display: flex;
-    justify-content: left;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    border: 5px solid black;
+    border: 4px solid black;
     border-radius: 5px;
-    background-color:rgb(49, 219, 241);
+    background-color:lightblue;
+    height: 147px;
+    min-height: auto;
+    max-height: 147px;
+
+    padding: 0 10px;
 }
 
 .headercontain .logo img
 {
-    justify-content: left;
+    min-height: auto;
     height: 150px;
+    max-height: 150px;
     width: 250px;
 }
 
+.pageMap{
+    display: flex;
+    flex: 1;
+}
 nav ul {
-    display: inline-block;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li{
-    display: inline;
-    list-style: none;
+    margin-right: 30px;
 }
 
 nav ul li a { 
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 30pt;
+    font-size: 25pt;
     color: black;
     text-decoration: none;
-    margin-left: 25px;
-    margin-right: 25px;
 }
+
+.buttonsforacc {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;   
+}
+
+.buttonsforacc p {
+    font-size: 25pt;
+}
+
+button{
+    font-size: 25pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    height: 50px;
+    background-color:lightblue; 
+}
+
+#Login-pop {
+    height: 250px;
+    width: 250px;
+}
+
+#signup-pop{
+    height: 250px;
+    width: 250px;
+}
+
+/* End of header for all pages */
