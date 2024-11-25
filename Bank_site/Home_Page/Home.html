@@ -12,7 +12,7 @@
         <div class="pageMap">
             <nav>
                 <ul>
-                    <li><a href="../Home_Page/Home.html">Home</a></li>
+                    <li><a href="../Home_Page/Home.html">Home</a></li>                   
                     <li><a href="../Credit_Cards/CreditCard.html">Credit Cards</a></li>
                     <li><a href="../Savings_Acc/">Savings Account</a></li>
                     <li><a href="../About_Us/AboutUs.html">About Us</a></li>
@@ -20,17 +20,79 @@
             </nav>
         </div>
         <div class="buttonsforacc">
-            <button popovertarget="Login-pop">Login</button>
-            <p>|</p>
-            <button popovertarget="signup-pop">Sign Up</button>
+            <button popovertarget="Login-pop" id="loginbutton">Login</button>
+            <p id="buttonline">|</p>
+            <button popovertarget="signup-pop" id="signupbutton">Sign Up</button>
         </div>
     </div>
     
     <div id="Login-pop" popover>
-        <p>here is more info</p>
+        <div class="login_container">
+            <h1>Login</h1>
+            <form name="loginform" onsubmit="return logincheck()">
+                <div class="inputs">
+                    <Label for="Name">Username</Label><br>
+                    <input type="text" id="Name"> <br>
+
+                    <label for="Password">Password</label> <br>
+                    <input type="password" id="Password">
+
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
     </div>
     <div id="signup-pop" popover>
-        <p>Text holder</p>
+        <div class="signupcontainer">
+            <h1>Sign Up</h1>
+            <form name="signupform" onsubmit="return signupCheck() ">
+                <div class="inputs">
+                    <Label for="Name">Username</Label>
+                    <input type="text" id="Name"> <br>
+
+                    <Label for="email">Email</Label>
+                    <input type="email" id="email"> <br>
+
+                    <label for="Password">Password</label> 
+                    <input type="password" id="Password"><br>
+
+                    <label for="ConfirmPassword">Confirm Password</label>
+                    <input type="password" id="ConfirmPassword">
+
+                    <button type="submit">Sign up</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <div class="maincontainer">
+        <div class="checkrates">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Proin metus ligula ultrices vitae maximus volutpat tellus mauris. Ipsum sit primis donec aenean malesuada volutpat suspendisse. Luctus ut curabitur etiam ultricies at. Justo dis tempus tellus tempus mattis facilisi. Felis maximus sed; commodo imperdiet habitasse ac blandit gravida. Sodales ad morbi lobortis nunc ullamcorper vulputate pretium. Porta natoque ultrices dapibus odio hendrerit porta. Primis ridiculus sociosqu natoque bibendum adipiscing maecenas. Magna tempus maecenas est porttitor lobortis litora fermentum.
+
+Nisl erat montes elementum pharetra imperdiet tincidunt sodales. Inceptos semper mauris et nisi, commodo nisl. Arcu nisi euismod sociosqu dignissim placerat justo ad. Laoreet eu maecenas diam cras nascetur. Placerat dictum ullamcorper venenatis dui laoreet fringilla hac ante mi. Leo risus senectus egestas phasellus nostra sociosqu curabitur lacus ad? Viverra sem nisi metus id interdum hac nisl.
+
+Montes sollicitudin risus sodales a elementum mauris risus. Sodales egestas himenaeos erat porta blandit eu sollicitudin ornare. Vehicula penatibus urna lorem ridiculus habitant feugiat sem ultrices. Nullam blandit hendrerit sollicitudin suscipit eleifend natoque sem hac. Ultrices placerat dolor semper per magnis cras rutrum quisque arcu. Tempor pharetra cursus arcu sapien feugiat ut sit?
+
+        </div>
+        <br><br>
+        <div class="qualification">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Proin metus ligula ultrices vitae maximus volutpat tellus mauris. Ipsum sit primis donec aenean malesuada volutpat suspendisse. Luctus ut curabitur etiam ultricies at. Justo dis tempus tellus tempus mattis facilisi. Felis maximus sed; commodo imperdiet habitasse ac blandit gravida. Sodales ad morbi lobortis nunc ullamcorper vulputate pretium. Porta natoque ultrices dapibus odio hendrerit porta. Primis ridiculus sociosqu natoque bibendum adipiscing maecenas. Magna tempus maecenas est porttitor lobortis litora fermentum.
+
+Nisl erat montes elementum pharetra imperdiet tincidunt sodales. Inceptos semper mauris et nisi, commodo nisl. Arcu nisi euismod sociosqu dignissim placerat justo ad. Laoreet eu maecenas diam cras nascetur. Placerat dictum ullamcorper venenatis dui laoreet fringilla hac ante mi. Leo risus senectus egestas phasellus nostra sociosqu curabitur lacus ad? Viverra sem nisi metus id interdum hac nisl.
+
+Montes sollicitudin risus sodales a elementum mauris risus. Sodales egestas himenaeos erat porta blandit eu sollicitudin ornare. Vehicula penatibus urna lorem ridiculus habitant feugiat sem ultrices. Nullam blandit hendrerit sollicitudin suscipit eleifend natoque sem hac. Ultrices placerat dolor semper per magnis cras rutrum quisque arcu. Tempor pharetra cursus arcu sapien feugiat ut sit?
+
+        </div>
+        <br><br>
+        <div class="referFriend">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Proin metus ligula ultrices vitae maximus volutpat tellus mauris. Ipsum sit primis donec aenean malesuada volutpat suspendisse. Luctus ut curabitur etiam ultricies at. Justo dis tempus tellus tempus mattis facilisi. Felis maximus sed; commodo imperdiet habitasse ac blandit gravida. Sodales ad morbi lobortis nunc ullamcorper vulputate pretium. Porta natoque ultrices dapibus odio hendrerit porta. Primis ridiculus sociosqu natoque bibendum adipiscing maecenas. Magna tempus maecenas est porttitor lobortis litora fermentum.
+
+Nisl erat montes elementum pharetra imperdiet tincidunt sodales. Inceptos semper mauris et nisi, commodo nisl. Arcu nisi euismod sociosqu dignissim placerat justo ad. Laoreet eu maecenas diam cras nascetur. Placerat dictum ullamcorper venenatis dui laoreet fringilla hac ante mi. Leo risus senectus egestas phasellus nostra sociosqu curabitur lacus ad? Viverra sem nisi metus id interdum hac nisl.
+
+Montes sollicitudin risus sodales a elementum mauris risus. Sodales egestas himenaeos erat porta blandit eu sollicitudin ornare. Vehicula penatibus urna lorem ridiculus habitant feugiat sem ultrices. Nullam blandit hendrerit sollicitudin suscipit eleifend natoque sem hac. Ultrices placerat dolor semper per magnis cras rutrum quisque arcu. Tempor pharetra cursus arcu sapien feugiat ut sit?
+        </div>
+    </div>
+
+    <button id="checkingscript">check session</button>
+    <script src="Home_script.Js"></script>
 </body>
 </html>
