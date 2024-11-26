@@ -1,4 +1,4 @@
-
+let logged = false
 function signupCheck() {
     // check if the username is empty
     if (document.forms["signupform"]["Name"].value.trim() == null || document.forms["signupform"]["Name"].value.trim() == "") {
@@ -31,13 +31,13 @@ function signupCheck() {
     }
 
     // Save username and password in sessionStorage but don't auto-login
-    var username = document.forms["signupform"]["Name"].value.trim();
-    var password = document.forms["signupform"]["Password"].value.trim();
+    var username = document.forms["signupform"]["Name"].value;
+    var password = document.forms["signupform"]["Password"].value;
 
     // Save the username and password to sessionStorage
     sessionStorage.setItem("username", username);
     sessionStorage.setItem("password", password);
-
+    
     alert("Successful signup, please login");
 
     return true;
@@ -61,14 +61,16 @@ function logincheck() {
         alert("Either Username or password is incorrect");
         return false;
     }
-
+    var loggedin = 1
+    sessionStorage.setItem("logged in", loggedin)
     //to make sure the login works
     alert("Login successful");
-    checkSessionAndReplaceHTML();
+    
+    //checkSessionAndReplaceHTML();
 
     return true;
 }
-
+checkSessionAndReplaceHTML();
 
 function checkSessionAndReplaceHTML() {
     // Retrieve the username from sessionStorage
@@ -77,7 +79,7 @@ function checkSessionAndReplaceHTML() {
     // Get the div that contains the login/signup buttons
     const buttonsDiv = document.querySelector(".buttonsforacc");
 
-    if (username) {
+    if (sessionStorage.length == 4) {
         // If the user is logged in, display a welcome message and logout button
         buttonsDiv.innerHTML = `
             <div id="username">Welcome, ${username}!</div>
@@ -90,6 +92,7 @@ function checkSessionAndReplaceHTML() {
             // Remove the username and password from sessionStorage
             sessionStorage.removeItem("username");
             sessionStorage.removeItem("password");
+            sessionStorage.removeItem("logged in");
 
             // Refresh the page to update the UI and show the login/signup buttons again
             location.reload();
@@ -103,10 +106,8 @@ function checkSessionAndReplaceHTML() {
         `;
     }
 }
-/*
-window.onload = function() {
-    checkSessionAndReplaceHTML();
-};*/
+
+
 
 /*
 function checkSessionAndReplaceHTML() {
