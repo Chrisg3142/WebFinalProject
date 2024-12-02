@@ -1,4 +1,7 @@
 /* Header for all pages */
+body {
+    background-color: rgba(227, 220, 230, 0.808);
+}
 
 .headercontain{
     display: flex;
@@ -112,7 +115,6 @@ button:hover::after{
     width: 100%;
 }
 /* underline on hover end */
-
 /* start of login popover */
 #Login-pop {
     margin: 15% auto;
@@ -239,3 +241,95 @@ button:hover::after{
     cursor: pointer;
 }
 /* End of header for all pages */
+
+
+
+
+
+.qualification{
+    display: flex;
+    box-shadow: 2px 2px 3px #4787e0;
+}
+
+
+.qualification .questions{
+    width: 50%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19pt;
+    border-right: 1px solid black;
+    background-color: #d1d2f3;
+}
+
+.qualification .answers{
+    width: 50%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19pt;
+    border-left: 1px solid black ;
+    background-color: #abcbf7;
+}
+/* bottom CSS */
+.referFriend{
+    display: flex;
+    width: 100%;
+    height: 350px;
+    border: none;
+    box-shadow: 1px 1px 4px 2px;
+}
+
+.friendpic{
+    width: 650px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.referFriend{
+    background-color: #d1dff3;
+}
+
+.referFriend .friendpic img{
+    display: inline-block;
+    margin: 0 auto;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    max-height: 400px;
+    box-shadow: 1px 1px 1px;
+}
+
+.referFriend .refer{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.sendemail form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.sendemail label{
+    font-size: 19pt;
+}
+
+.sendemail input{
+    height: 25px;
+    max-width: 100%;
+    width: 175px;
+    border-radius: 10px;
+}
+.sendemail button{
+    background-color: rgb(172, 160, 240);
+    margin-top: 15px;
+    width: 100%;
+    max-width: 170px;
+    height: 60px;
+    border-radius: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12pt;
+}

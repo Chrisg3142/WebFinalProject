@@ -1,4 +1,5 @@
 /* Header for all pages */
+
 .headercontain{
     display: flex;
     align-items: center;
@@ -38,11 +39,31 @@ nav ul li{
 }
 
 nav ul li a { 
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25pt;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    cursor: pointer;
+    position: relative;
 }
+
+/* underline on hover start */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -2px;  /*-6px*/
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* underline on hover end */
 
 .buttonsforacc {
     display: flex;
@@ -54,23 +75,167 @@ nav ul li a {
 .buttonsforacc p {
     font-size: 25pt;
 }
-
-button{
-    font-size: 25pt;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.buttonsforacc #username{
+    display: flex;
+    align-items: center;
+    font-size: 20pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: none;
     height: 50px;
-    background-color:lightblue; 
+    background-color:lightblue;
+    cursor: pointer; 
+    position: relative;
+}
+/* underline on hover start */
+.buttonsforacc button{
+    font-size: 25pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    height: 50px;
+    background-color:lightblue;
+    cursor: pointer; 
+    position: relative;
 }
 
+.buttonsforacc button::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -1px;  /*-6px*/
+    transition: 0.5s;
+}
+
+button:hover::after{
+    width: 100%;
+}
+/* underline on hover end */
+
+/* start of login popover */
 #Login-pop {
-    height: 250px;
-    width: 250px;
+    margin: 15% auto;
+    position:initial;
+    min-height: 300px;
+    height:fit-content;
+    max-height: 600px;
+    width:100%;
+    max-width: fit-content; /* 500px */
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
+.login_container {
+    background-color:lightblue;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    min-width: 250px;
+    width: 100%;
+    max-width:inherit;
+    min-height: 300px;;
+    height:auto;
+    max-height: 500px;
+    text-align: left;
+}
+
+.login_container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a1818;
+}
+
+.login_container form label{
+    display: block;
+    margin-bottom: 5px;
+    color: #041a1d;
+    font-weight: bold;
+}
+
+.login_container form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+
+}
+
+.login_container form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #534bc7c9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*end of login popover*/
+
+/* sign up pop over */
 #signup-pop{
-    height: 250px;
-    width: 250px;
+    margin: 15% auto;
+    position:initial;
+    min-height: 300px;
+    height:fit-content;
+    max-height: 600px;
+    width:100%;
+    max-width: fit-content; /* 500px */
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
+.signupcontainer {
+    background-color:lightblue;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    min-width: 250px;
+    width: 100%;
+    max-width:inherit;
+    min-height: 300px;;
+    height:auto;
+    max-height: 500px;
+    text-align: left;
+}
+
+.signupcontainer h1{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a1818;
+}
+
+.signupcontainer form label{
+    display: block;
+    margin-bottom: 10px;
+    color: #041a1d;
+    font-weight: bold;
+}
+
+.signupcontainer form input{
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+
+}
+
+.signupcontainer form button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #534bc7c9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 /* End of header for all pages */
