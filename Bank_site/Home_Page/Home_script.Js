@@ -107,6 +107,7 @@ checkSessionAndReplaceHTML();
 const emailinput = document.getElementById("emailinput");
 const buttonfriend = document.getElementById("friendsemail");
 
+//function for checking email domains
 function properemail (email) {
     const properEmails = ['hotmail.com', 'gmail.com', 'yahoo.com', 'outlook.com'];
     const emailsections = email.split('@');
@@ -118,6 +119,7 @@ function properemail (email) {
     }
 }
 
+//function for checking the email and changing the text within the input box
  function sendemail () {
     const email = emailinput.value.trim();
 
@@ -129,8 +131,10 @@ function properemail (email) {
     emailinput.setAttribute('readonly', true);
 }
 
+//adding interaction with the button 
 buttonfriend.addEventListener('click', sendemail)
 
+//being able to add a new email
 emailinput.addEventListener('click', function(){
     if (emailinput.readOnly) {
         emailinput.removeAttribute('readonly');
