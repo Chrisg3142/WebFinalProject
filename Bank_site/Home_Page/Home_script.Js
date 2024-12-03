@@ -102,6 +102,42 @@ function checkSessionAndReplaceHTML() {
     }
 }
 checkSessionAndReplaceHTML();
+//end of nav buttons
+
+const emailinput = document.getElementById("emailinput");
+const buttonfriend = document.getElementById("friendsemail");
+
+function properemail (email) {
+    const properEmails = ['hotmail.com', 'gmail.com', 'yahoo.com', 'outlook.com'];
+    const emailsections = email.split('@');
+
+    if( emailsections.length == 2 && properEmails.includes(emailsections[1])) {
+        return true
+    } else {
+        return false
+    }
+}
+
+ function sendemail () {
+    const email = emailinput.value.trim();
+
+    if (properemail(email)){
+        emailinput.value = 'Email sent, thank you!'
+    } else {
+        emailinput.value = 'Not a valid email domain.'
+    }
+    emailinput.setAttribute('readonly', true);
+}
+
+buttonfriend.addEventListener('click', sendemail)
+
+emailinput.addEventListener('click', function(){
+    if (emailinput.readOnly) {
+        emailinput.removeAttribute('readonly');
+        emailinput.value = ''
+    }
+})
+
 
 const button = document.getElementById("checkingscript");
 
