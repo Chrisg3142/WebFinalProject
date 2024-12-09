@@ -241,10 +241,59 @@ button:hover::after{
     cursor: pointer;
 }
 /* End of header for all pages */
-
-
-
-
+.checkrates{
+    display: flex;
+    border: 1px solid black ;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.savingsforkids{
+    display: inline-block;
+    background-color: pink;
+    width: 100%;
+    max-width: 50%;
+    text-align: center;
+}
+.savingsforkids h3{
+    font-size: 19pt;
+    margin-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.savingsforkids p{
+    margin-top: 8px;
+    font-size: 16pt;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#num {
+    color: rgb(47, 47, 47);
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+.adultacc{
+    display: inline-block;
+    background-color: rgb(123, 123, 248);
+    width: 100%;
+    max-width: 50%;
+    text-align: center;
+}
+.adultacc h3{
+    font-size: 19pt;
+    margin-bottom: 0pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.adultacc p{
+    margin-top: 8px;
+    font-size: 16pt;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 /*middle container */
 .qualification{
     display: flex;
