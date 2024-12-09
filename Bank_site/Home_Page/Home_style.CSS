@@ -14,7 +14,8 @@ body {
     height: 147px;
     min-height: auto;
     max-height: 147px;
-
+    min-width: 80%;
+    max-width: 100%;
     padding: 0 10px;
 }
 
@@ -241,15 +242,17 @@ button:hover::after{
     cursor: pointer;
 }
 /* End of header for all pages */
+/*start of top */
 .checkrates{
     display: flex;
     border: 1px solid black ;
     width: 100%;
+    height: 100%;
     margin-bottom: 0px;
 }
 .savingsforkids{
     display: inline-block;
-    background-color: pink;
+    background-color: rgb(156, 189, 243);
     width: 100%;
     max-width: 50%;
     text-align: center;
@@ -276,7 +279,7 @@ button:hover::after{
 }
 .adultacc{
     display: inline-block;
-    background-color: rgb(123, 123, 248);
+    background-color: rgb(123, 200, 248);
     width: 100%;
     max-width: 50%;
     text-align: center;
@@ -294,6 +297,7 @@ button:hover::after{
     margin-bottom: 0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/*end of top */
 /*middle container */
 .qualification{
     display: flex;

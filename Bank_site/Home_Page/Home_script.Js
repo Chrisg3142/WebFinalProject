@@ -112,7 +112,7 @@ function properemail (email) {
     const properEmails = ['hotmail.com', 'gmail.com', 'yahoo.com', 'outlook.com'];
     const emailsections = email.split('@');
 
-    if( emailsections.length == 2 && properEmails.includes(emailsections[1])) {
+    if(emailsections.length == 2 && properEmails.includes(emailsections[1])) {
         return true
     } else {
         return false
