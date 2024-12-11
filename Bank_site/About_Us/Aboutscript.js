@@ -16,7 +16,6 @@ function signupCheck() {
         alert("Please enter a Password");
         return false;
     }
-
     // check if the confirm password is empty
     if (document.forms["signupform"]["ConfirmPassword"].value.trim() == null || document.forms["signupform"]["ConfirmPassword"].value.trim() == "") {
         alert("Please confirm your password");
@@ -29,17 +28,33 @@ function signupCheck() {
         return false;
     }
 
-    // Save username and password in sessionStorage but don't auto-login
-    var username = document.forms["signupform"]["Name"].value;
-    var password = document.forms["signupform"]["Password"].value;
+    if(formemail()){
+        var username = document.forms["signupform"]["Name"].value;
+        var password = document.forms["signupform"]["Password"].value;
 
-    // Save the username and password to sessionStorage
-    sessionStorage.setItem("username", username);
-    sessionStorage.setItem("password", password);
-    
-    alert("Successful signup, please login");
+        // Save the username and password to sessionStorage
+        sessionStorage.setItem("username", username);
+        sessionStorage.setItem("password", password);
+        
+        alert("Successful signup, please login");
 
-    return true;
+        return true;
+    } else {
+        return false;
+    }
+
+        //return true
+        // Save username and password in sessionStorage but don't auto-login
+        //var username = document.forms["signupform"]["Name"].value;
+        //var password = document.forms["signupform"]["Password"].value;
+
+        // Save the username and password to sessionStorage
+        //sessionStorage.setItem("username", username);
+        //sessionStorage.setItem("password", password);
+        
+        //alert("Successful signup, please login");
+
+        //return true;
 }
 function logincheck() {
     //getting user and pass from session storage in signup form 
@@ -102,6 +117,29 @@ function checkSessionAndReplaceHTML() {
     }
 }
 checkSessionAndReplaceHTML();
+//end of nav buttons
+
+//function for checking email domains
+function properemail (email) {
+    const properEmails = ['hotmail.com', 'gmail.com', 'yahoo.com', 'outlook.com'];
+    const emailsections = email.split('@');
+
+    if(emailsections.length == 2 && properEmails.includes(emailsections[1])) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function formemail (){
+    formEmail = document.forms["signupform"]["email"].value.trim();
+    if (properemail(formEmail)){
+        return true
+    } else {
+        alert("Enter a proper email domain");
+        return false;
+    }
+}
 
 const button = document.getElementById("checkingscript");
 
