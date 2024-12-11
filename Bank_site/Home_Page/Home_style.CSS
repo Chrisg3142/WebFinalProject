@@ -1,244 +1,211 @@
 /* Header for all pages */
-body {
-    background-color: rgba(227, 220, 230, 0.808);
-}
-
-.headercontain{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    border: 4px solid black;
-    border-radius: 5px;
-    background-color:lightblue;
-    height: 147px;
-    min-height: auto;
-    max-height: 147px;
-    min-width: 80%;
-    max-width: 100%;
+body { 
+    background-color: rgb(198, 210, 254);
+}  
+.headercontain{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-direction: row; 
+    border: 4px solid black; 
+    border-radius: 5px; 
+    background-color:rgb(190, 238, 254); 
+    height: 147px; 
+    min-height: auto; 
+    max-height: 147px; 
     padding: 0 10px;
 }
-
-.headercontain .logo img
-{
-    min-height: auto;
-    height: 150px;
-    max-height: 150px;
+.headercontain .logo img{ 
+    min-height: auto; 
+    height: 150px; 
+    max-height: 150px; 
     width: 250px;
 }
-
-.pageMap{
-    display: flex;
+.pageMap{ 
+    display: flex; 
     flex: 1;
 }
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
     margin: 0;
 }
-
-nav ul li{
+nav ul li{ 
     margin-right: 35px;
 }
-
 nav ul li a { 
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25pt;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-}
-
-/* underline on hover start */
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    background: #000000;
-    position: absolute;
-    left: 0;
-    bottom: -2px;  /*-6px*/
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after{
-    width: 100%;
-}
-
-/* underline on hover end */
-
-.buttonsforacc {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;   
-}
-
-.buttonsforacc p {
-    font-size: 25pt;
-}
-.buttonsforacc #username{
-    display: flex;
-    align-items: center;
-    font-size: 20pt;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: none;
-    height: 50px;
-    background-color:lightblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 25pt; 
+    color: rgb(0, 0, 0); 
+    text-decoration: none; 
     cursor: pointer; 
     position: relative;
 }
 /* underline on hover start */
-.buttonsforacc button{
+nav ul li a::after{ 
+    content: ''; 
+    width: 0; 
+    height: 2px; 
+    background: #000000; 
+    position: absolute; 
+    left: 0; 
+    bottom: -2px; /*-6px*/ 
+    transition: 0.5s;
+}
+nav ul li a:hover::after{ 
+    width: 100%;}/* underline on hover end */
+.buttonsforacc { 
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+.buttonsforacc p { 
     font-size: 25pt;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: none;
-    height: 50px;
-    background-color:lightblue;
+}
+.buttonsforacc #username{ 
+    display: flex; 
+    align-items: center; 
+    font-size: 20pt; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    border: none; 
+    height: 50px; 
+    background-color:rgb(190, 238, 254); 
     cursor: pointer; 
     position: relative;
 }
-
-.buttonsforacc button::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    background: #000000;
-    position: absolute;
-    left: 0;
-    bottom: -1px;  /*-6px*/
-    transition: 0.5s;
-}
-
-button:hover::after{
+/* underline on hover start */
+.buttonsforacc button{ 
+        font-size: 25pt; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        border: none; 
+        height: 50px; 
+        background-color:rgb(190, 238, 254); 
+        cursor: pointer; 
+        position: relative;}
+.buttonsforacc button::after{ 
+    content: ''; 
+    width: 0; 
+    height: 2px; 
+    background: #000000; 
+    position: absolute; 
+    left: 0; 
+    bottom: -1px; /*-6px*/ 
+    transition: 0.5s;}
+button:hover::after{ 
     width: 100%;
 }
 /* underline on hover end */
 /* start of login popover */
-#Login-pop {
-    margin: 15% auto;
-    position:initial;
-    min-height: 300px;
-    height:fit-content;
-    max-height: 600px;
-    width:100%;
-    max-width: fit-content; /* 500px */
-    border-radius: 10px;
+#Login-pop { 
+    margin: 15% auto; 
+    position:initial; 
+    min-height: 300px; 
+    height:fit-content; 
+    max-height: 600px; 
+    width:100%; 
+    max-width: fit-content; /* 500px */ 
+    border-radius: 10px; 
     border: 1px solid #ddd;
 }
-
-.login_container {
-    background-color:lightblue;
-    padding: 20px 30px;
+.login_container { 
+    background-color:rgb(190, 238, 254); 
+    padding: 20px 30px; 
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-    min-width: 250px;
-    width: 100%;
-    max-width:inherit;
-    min-height: 300px;;
-    height:auto;
-    max-height: 500px;
-    text-align: left;
-}
-
-.login_container h1{
-    text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); 
+    min-width: 250px; 
+    width: 100%; 
+    max-width:inherit; 
+    min-height: 300px;; 
+    height:auto; 
+    max-height: 500px; 
+    text-align: left;}
+.login_container h1{ 
+    text-align: center; 
+    margin-bottom: 20px; 
     color: #1a1818;
 }
-
-.login_container form label{
-    display: block;
-    margin-bottom: 5px;
-    color: #041a1d;
+.login_container form label{ 
+    display: block; 
+    margin-bottom: 5px; 
+    color: #041a1d; 
     font-weight: bold;
 }
-
-.login_container form input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login_container form input{ 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     font-size: 14px;
-
 }
-
-.login_container form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #534bc7c9;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
+.login_container form button { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 15px; 
+    background-color: #534bc7c9; 
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    font-size: 16px; 
     cursor: pointer;
 }
 /*end of login popover*/
-
 /* sign up pop over */
-#signup-pop{
-    margin: 15% auto;
-    position:initial;
-    min-height: 300px;
-    height:fit-content;
-    max-height: 600px;
-    width:100%;
-    max-width: fit-content; /* 500px */
-    border-radius: 10px;
+#signup-pop{ 
+    margin: 15% auto; 
+    position:initial; 
+    min-height: 300px; 
+    height:fit-content; 
+    max-height: 600px; 
+    width:100%; 
+    max-width: fit-content; /* 500px */ 
+    border-radius: 10px; 
     border: 1px solid #ddd;
 }
-
-.signupcontainer {
-    background-color:lightblue;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-    min-width: 250px;
-    width: 100%;
-    max-width:inherit;
-    min-height: 300px;;
-    height:auto;
-    max-height: 500px;
+.signupcontainer { 
+    background-color:rgb(190, 238, 254); 
+    padding: 20px 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); 
+    min-width: 250px; 
+    width: 100%; 
+    max-width:inherit; 
+    min-height: 300px; 
+    height:auto; 
+    max-height: 500px; 
     text-align: left;
 }
-
-.signupcontainer h1{
-    text-align: center;
-    margin-bottom: 15px;
+.signupcontainer h1{ 
+    text-align: center; 
+    margin-bottom: 15px; 
     color: #1a1818;
 }
-
-.signupcontainer form label{
-    display: block;
-    margin-bottom: 10px;
-    color: #041a1d;
+.signupcontainer form label{ 
+    display: block; 
+    margin-bottom: 10px; 
+    color: #041a1d; 
     font-weight: bold;
 }
-
-.signupcontainer form input{
-    width: 100%;
-    height: 20px;
-    padding: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.signupcontainer form input{ 
+    width: 100%; 
+    height: 20px; 
+    padding: 5px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
     font-size: 14px;
-
 }
-
-.signupcontainer form button {
-    width: 100%;
-    padding: 5px;
-    margin-top: 10px;
-    background-color: #534bc7c9;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
+.signupcontainer form button { 
+    width: 100%; 
+    padding: 5px; 
+    margin-top: 10px; 
+    background-color: #534bc7c9; 
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    font-size: 16px; 
     cursor: pointer;
 }
 /* End of header for all pages */
