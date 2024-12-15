@@ -42,19 +42,6 @@ function signupCheck() {
     } else {
         return false;
     }
-
-        //return true
-        // Save username and password in sessionStorage but don't auto-login
-        //var username = document.forms["signupform"]["Name"].value;
-        //var password = document.forms["signupform"]["Password"].value;
-
-        // Save the username and password to sessionStorage
-        //sessionStorage.setItem("username", username);
-        //sessionStorage.setItem("password", password);
-        
-        //alert("Successful signup, please login");
-
-        //return true;
 }
 function logincheck() {
     //getting user and pass from session storage in signup form 
@@ -140,9 +127,48 @@ function formemail (){
     }
 }
 
-const button = document.getElementById("checkingscript");
+const youth_checkbox = document.getElementById("account-youth");
+const adult_checkbox = document.getElementById("account-adult");
+const starting_amount = document.getElementById("amount").value
+const start = document.getElementById("computer-interest");
 
-button.addEventListener("click", function(){
+start.addEventListener("onclick",checked_boxes);
+
+function checked_boxes(){
+    alert("clicked");
+    const youth_checkbox = document.getElementById("account-youth");
+    const adult_checkbox = document.getElementById("account-adult");
+
+    if (youth_checkbox.checked && adult_checkbox.checked){
+        alert("pelase select only one");
+    } else if (youth_checkbox.checked){
+        var interest_rate = .035;
+        alert(interest_rate);
+        return interest_rate;
+    } else if (adult_checkbox.checked){
+        var interest_rate = .045
+        alert(interest_rate);
+        return interest_rate;
+    } else{
+        return false
+    }
+}
+
+function interest_compute(amount){
+    var time = document.getElementById("time").value;
+    var time_num = time.split(" ");
+    parseInt(time_num);
+    if (time_num == 6){
+        let interestr = amount*interest_rate*.5;
+    }
+
+}
+
+
+
+
+const check_this = document.getElementById("checking-code");
+check_this.addEventListener("click", function(){
     const numofitems = sessionStorage.length;
     alert(numofitems);
 });

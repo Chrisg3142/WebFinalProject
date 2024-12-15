@@ -42,19 +42,6 @@ function signupCheck() {
     } else {
         return false;
     }
-
-        //return true
-        // Save username and password in sessionStorage but don't auto-login
-        //var username = document.forms["signupform"]["Name"].value;
-        //var password = document.forms["signupform"]["Password"].value;
-
-        // Save the username and password to sessionStorage
-        //sessionStorage.setItem("username", username);
-        //sessionStorage.setItem("password", password);
-        
-        //alert("Successful signup, please login");
-
-        //return true;
 }
 function logincheck() {
     //getting user and pass from session storage in signup form 
@@ -167,9 +154,8 @@ emailinput.addEventListener('click', function(){
 })
 
 
-const button = document.getElementById("checkingscript");
-
-button.addEventListener("click", function(){
+const check_this = document.getElementById("checking-code");
+check_this.addEventListener("click", function(){
     const numofitems = sessionStorage.length;
     alert(numofitems);
 });

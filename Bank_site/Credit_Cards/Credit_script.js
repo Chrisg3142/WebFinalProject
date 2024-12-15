@@ -42,19 +42,6 @@ function signupCheck() {
     } else {
         return false;
     }
-
-        //return true
-        // Save username and password in sessionStorage but don't auto-login
-        //var username = document.forms["signupform"]["Name"].value;
-        //var password = document.forms["signupform"]["Password"].value;
-
-        // Save the username and password to sessionStorage
-        //sessionStorage.setItem("username", username);
-        //sessionStorage.setItem("password", password);
-        
-        //alert("Successful signup, please login");
-
-        //return true;
 }
 function logincheck() {
     //getting user and pass from session storage in signup form 
@@ -118,6 +105,76 @@ function checkSessionAndReplaceHTML() {
 }
 checkSessionAndReplaceHTML();
 //end of nav buttons
+document.getElementById("submit-score").addEventListener("click", function() {
+    if (sessionStorage.length== 4){
+        const ssnInput = document.getElementById("ssn").value.trim();
+        if (isValidSSN(ssnInput)) {
+            let score = getRandomScore(); // Generate a random score
+            let splits = ssnInput.split('-');
+            let first = splits[0];
+            let second = splits[1];
+            let last = splits[2];
+            total = parseInt(first) + parseInt(second) + parseInt(last);
+            if (total <= 2000){
+                score = score + 50;
+                if (score > 800){
+                    score = score - 50;
+                }
+            } else if (total <= 4000){
+                score = score + 70;
+                if (score > 800){
+                    score = score - 70;
+                }
+            } else if (total <= 6000){
+                score = score + 90;
+                if (score > 800){
+                    score = score - 90;
+                }
+            }
+            displayScore(score);
+        
+        } else {
+            alert("Please enter a valid SSN :)(format: XXX-XX-XXXX).");
+        }
+    }
+    else {
+        alert("please log in first")
+    }
+});
+
+function isValidSSN(ssn) {
+    const ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
+    return ssnRegex.test(ssn);
+}
+
+function getRandomScore() {
+    return Math.floor(Math.random() * (850 - 300 + 1))+300;
+}
+
+function displayScore(score) {
+    const returnedScoreDiv = document.querySelector(".returned-score");
+    const scoreElement = document.getElementById("score");
+
+    // Show the returned score div and hide the input form
+    document.querySelector(".check-score").style.display = "none";
+    returnedScoreDiv.style.display = "block";
+
+    // Display the generated score
+    scoreElement.textContent = score;
+}
+
+//resets form
+document.getElementById("recheck").addEventListener("click", function() {
+    document.querySelector(".check-score").style.display = "block";
+    document.querySelector(".returned-score").style.display = "none";
+    document.getElementById("ssn").value = ""; 
+});
+
+
+
+
+
+
 
 
 
@@ -143,9 +200,9 @@ function formemail (){
     }
 }
 
-const button = document.getElementById("checkingscript");
-
-button.addEventListener("click", function(){
+const check_this = document.getElementById("checking-code");
+check_this.addEventListener("click", function(){
     const numofitems = sessionStorage.length;
     alert(numofitems);
 });
+

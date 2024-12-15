@@ -141,9 +141,8 @@ function formemail (){
     }
 }
 
-const button = document.getElementById("checkingscript");
-
-button.addEventListener("click", function(){
+const check_this = document.getElementById("checking-code");
+check_this.addEventListener("click", function(){
     const numofitems = sessionStorage.length;
     alert(numofitems);
 });
