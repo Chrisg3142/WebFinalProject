@@ -343,6 +343,7 @@ button:hover::after{
 
 .referFriend .refer{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 20px;
     font-size: 24pt;
     text-align: center;
 }
@@ -376,6 +377,7 @@ button:hover::after{
     cursor: pointer;
 }
 footer {
+    margin-top: 20px;
     width: 100%;
     background-color: rgb(153, 197, 212);
 }

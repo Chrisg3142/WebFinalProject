@@ -216,8 +216,9 @@ button:hover::after{
     cursor: pointer;
 }
 
-.account-info{
-    margin: 30px auto;
+.account-info, .adult-account{
+    margin: 0px auto;
+    margin-top: 30px;
     width: 60%;
     padding: 30px 30px;
     height: fit-content;
@@ -226,10 +227,13 @@ button:hover::after{
     border-radius: 15px;
     box-shadow: 1px 1px 1px 3px rgb(184, 172, 157);
 }
-.account-info h2{
+.adult-account{
+    margin-bottom: 40px;
+}
+.account-info h2, .adult-account h2{
     text-align: center;
 }
-.account-info p{
+.account-info p, .adult-account p{
     margin-top: 10px;
     padding: 0px 15px;
     font-family:'Times New Roman', Times, serif;
@@ -279,12 +283,19 @@ button:hover::after{
 }
 .interest-calculator input{
     margin-top: 15px;
+    text-align: center;
     margin-bottom: 10px;
     font-size: 12pt;
     border: 1px solid black;
     border-radius: 5px;
     width: 200px;
     padding: 0 15px;
+}
+.interest-calculator #time{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0%;
+    border-radius: 10px;
 }
 .interest-calculator button{
     display: flex;
@@ -300,6 +311,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+
     background-color: rgb(153, 197, 212);
 }
 footer .content {

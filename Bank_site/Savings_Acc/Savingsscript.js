@@ -129,41 +129,61 @@ function formemail (){
 
 const youth_checkbox = document.getElementById("account-youth");
 const adult_checkbox = document.getElementById("account-adult");
-const starting_amount = document.getElementById("amount").value
+const returnedInterest = document.getElementById("interest");
 const start = document.getElementById("computer-interest");
 
-start.addEventListener("onclick",checked_boxes);
+    
+start.addEventListener("click",display_interest);
 
+let interest_rate = 0;
+let total_interest = 0;
 function checked_boxes(){
-    alert("clicked");
     const youth_checkbox = document.getElementById("account-youth");
     const adult_checkbox = document.getElementById("account-adult");
 
     if (youth_checkbox.checked && adult_checkbox.checked){
         alert("pelase select only one");
+        interest_rate = 0;
     } else if (youth_checkbox.checked){
-        var interest_rate = .035;
-        alert(interest_rate);
-        return interest_rate;
+        interest_rate = .035;
     } else if (adult_checkbox.checked){
-        var interest_rate = .045
-        alert(interest_rate);
-        return interest_rate;
+        interest_rate = .045;
     } else{
         return false
     }
+    return interest_rate;
 }
 
-function interest_compute(amount){
-    var time = document.getElementById("time").value;
-    var time_num = time.split(" ");
-    parseInt(time_num);
+function interest_compute(amount, time_num){
     if (time_num == 6){
-        let interestr = amount*interest_rate*.5;
+        total_interest = amount*interest_rate*.5;
+    } else if (time_num == 1){
+        total_interest = amount*interest_rate*1;
+    } else if (time_num == 2){
+        total_interest = amount*interest_rate*2;
+    } else if (time_num == 4){
+        total_interest = amount*interest_rate*4;
     }
-
+    return total_interest;
 }
+function display_interest(event){
+    event.preventDefault();
+    const starting_amount = parseFloat(document.getElementById("amount").value)
+    const time = document.getElementById("time").value
+    const time_num = parseInt(time.split("")[0]);
+    if (isNaN(starting_amount) || starting_amount <= 0) {
+        alert("Please enter a valid amount");
+        return;
+    }
+    const rate = checked_boxes();
+    if (rate === 0) {
+        return;
+    }
+    const calculatedInterest = interest_compute(starting_amount, time_num);
 
+    returnedInterest.value = calculatedInterest.toFixed(2); 
+    returnedInterest.setAttribute('readonly', true)
+}
 
 
 
