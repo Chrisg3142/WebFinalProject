@@ -170,14 +170,6 @@ document.getElementById("recheck").addEventListener("click", function() {
     document.getElementById("ssn").value = ""; 
 });
 
-
-
-
-
-
-
-
-
 //function for checking email domains
 function properemail (email) {
     const properEmails = ['hotmail.com', 'gmail.com', 'yahoo.com', 'outlook.com'];
